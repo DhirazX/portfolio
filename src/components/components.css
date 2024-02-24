@@ -288,6 +288,9 @@
     opacity: 1;
     transform: none;
   }
+  .about {
+    overflow: hidden;
+  }
   .about-content {
     align-items: center;
   }
@@ -365,6 +368,7 @@
   .outro-text {
     font-size: 12px;
   }
+
   .about-img {
     width: 100%;
   }
@@ -378,13 +382,14 @@
   .about-content {
     margin-left: 0;
   }
-  .project-name{
+  .project-name {
     font-size: 25px;
   }
-  .project-info{
+  .project-info {
     margin-top: 10px;
   }
-  .about-text, .project-info{
+  .about-text,
+  .project-info {
     font-size: 16px;
   }
   /* .projects-wrapper{
