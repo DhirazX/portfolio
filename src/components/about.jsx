@@ -15,7 +15,7 @@ const About = ({ aboutRef, isAboutVisible }) => {
           About
         </div>
         <div className={`about-text hiddenRight ${isAboutVisible && `show`}`}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+          LLorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
           ratione perspiciatis quaerat, ullam eligendi nesciunt doloribus,
           officia numquam aspernatur harum labore nihil architecto commodi quo
           aliquid delectus nostrum modi amet.
