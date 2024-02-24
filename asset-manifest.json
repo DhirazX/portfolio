@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.300aa07c.css",
+    "main.js": "/portfolio/static/js/main.c9ef2948.js",
+    "static/media/easyCanteen.png": "/portfolio/static/media/easyCanteen.6bf98e969f662da1f489.png",
+    "static/media/welcomecc.png": "/portfolio/static/media/welcomecc.14e5fae60c9d93282b03.png",
+    "index.html": "/portfolio/index.html",
+    "main.300aa07c.css.map": "/portfolio/static/css/main.300aa07c.css.map",
+    "main.c9ef2948.js.map": "/portfolio/static/js/main.c9ef2948.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.300aa07c.css",
+    "static/js/main.c9ef2948.js"
+  ]
+}
