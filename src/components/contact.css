@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oswald:wght@200;300;600;700&family=Poppins:wght@100&family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --main-bg: white;
+  --secondary-bg: black;
+  --gray-bg: #151515;
+  --main-text-color: #000000;
+  --sub-text-color: white;
+  --border-color: rgba(255, 255, 255, 0.162);
+  --title-text: 5rem;
+  --sub-heading-text: 2.2rem;
+  --sub-text: 1.1rem;
+  scroll-behavior: smooth;
+}
+.contact-wrapper {
+  height: 100vh;
+  background-color: var(--main-bg);
+  color: var(--main-text-color);
+  padding: 5% 10%;
+  font-family: oswald;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact-text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+.contact-title {
+  font-size: 7rem;
+  font-weight: 600;
+}
+.email-text {
+  margin-top: 10px;
+  font-size: var(--sub-text);
+}
+.email {
+  font-size: var(--sub-heading-text);
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  font-size: 2rem;
+}
+.icon {
+  transition: 0.3s all;
+  color: var(--main-text-color);
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 900px){
+  .contact-title{
+    font-size: 5rem;
+  }
+  .email{
+    font-size: 1.8rem;
+  }
+  .contact-wrapper{
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 600px){
+  .contact-title{
+    font-size: 3rem;
+  }
+  .email-text{
+    font-size: 1rem;
+  }
+  .email{
+    font-size: 1.5rem;
+  }
+  .socials{
+    font-size: 1.5rem;
+  }
+}
