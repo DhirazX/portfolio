@@ -2,7 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import "./components.css";
 
-const Projects = ({ projectRef, isProjectVisible }) => {
+const Projects = ({
+  projectRef,
+  isProjectVisible,
+  projectEnter,
+  projectLeave,
+}) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -41,7 +46,11 @@ const Projects = ({ projectRef, isProjectVisible }) => {
                   vero vel error rem ab voluptate quod?
                 </div>
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onMouseEnter={projectEnter}
+                onMouseLeave={projectLeave}
+              >
                 <div className="card-outer">
                   <div className="circle"></div>
                   <div className="circle"></div>
@@ -66,7 +75,11 @@ const Projects = ({ projectRef, isProjectVisible }) => {
                   vero vel error rem ab voluptate quod?
                 </div>
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onMouseEnter={projectEnter}
+                onMouseLeave={projectLeave}
+              >
                 <div className="card-outer">
                   <div className="circle"></div>
                   <div className="circle"></div>
@@ -91,7 +104,11 @@ const Projects = ({ projectRef, isProjectVisible }) => {
                   vero vel error rem ab voluptate quod?
                 </div>
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onMouseEnter={projectEnter}
+                onMouseLeave={projectLeave}
+              >
                 <div className="card-outer">
                   <div className="circle"></div>
                   <div className="circle"></div>

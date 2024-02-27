@@ -16,13 +16,21 @@ body::-webkit-scrollbar-thumb {
 }
 .cursor {
   position: fixed;
-  z-index: 9999999;
+  z-index: 999999;
   background-color: white;
+  font-size: 20px;
+  color: white;
+  /* font-weight: 700; */
+  font-family: oswald;
   height: 24px;
   width: 24px;
   border-radius: 50%;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   mix-blend-mode: difference;
   /* filter: invert(1)  grayscale(1) contrast(2); */
   pointer-events: none;
 }
+

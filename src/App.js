@@ -15,7 +15,10 @@ function App() {
     x: 0,
     y: 0,
   });
-  const [textVariants, setTextVariants] = useState("default");
+  const [cursorText, setCursorText] = useState("");
+  const [variants, setVariants] = useState("default");
+  const cursorRef = useRef();
+
   //cursor EventListener
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
@@ -37,11 +40,34 @@ function App() {
       x: cursor.x - 75,
       y: cursor.y - 75,
     },
+    project: {
+      height: 50,
+      width: 150,
+      x: cursor.x - 75,
+      y: cursor.y - 75,
+    },
   };
 
-  const textEnter = () => setTextVariants("text");
-  const textLeave = () => setTextVariants("default");
-
+  const textEnter = () => {
+    setVariants("text");
+  };
+  const textLeave = () => setVariants("default");
+  const projectEnter = () => {
+    setVariants("project");
+    setCursorText("Visit Site");
+    cursorRef.current.style.borderRadius = "50px";
+    cursorRef.current.style.mixBlendMode = "normal";
+    cursorRef.current.style.backgroundColor = "black";
+    cursorRef.current.style.border = "2px solid grey";
+  };
+  const projectLeave = () => {
+    setVariants("default");
+    setCursorText("");
+    cursorRef.current.style.borderRadius = "50%";
+    cursorRef.current.style.mixBlendMode = "difference";
+    cursorRef.current.style.backgroundColor = "white";
+    cursorRef.current.style.border = "0px";
+  };
   //observes about, project component
   useEffect(() => {
     const aboutObserver = new IntersectionObserver((entries) => {
@@ -63,15 +89,23 @@ function App() {
   return (
     <div className="container">
       <motion.div
+        ref={cursorRef}
         className="cursor"
         variants={cursorVariants}
-        animate={textVariants}
-      ></motion.div>
+        animate={variants}
+      >
+        {cursorText}
+      </motion.div>
       <div className="App">
         <Hero textEnter={textEnter} textLeave={textLeave} />
         <About aboutRef={aboutRef} isAboutVisible={isAboutVisible} />
-        <Projects projectRef={projectRef} isProjectVisible={isProjectVisible} />
-        <Contact textEnter={textEnter} textLeave={textLeave}/>
+        <Projects
+          projectRef={projectRef}
+          isProjectVisible={isProjectVisible}
+          projectEnter={projectEnter}
+          projectLeave={projectLeave}
+        />
+        <Contact textEnter={textEnter} textLeave={textLeave} />
       </div>
     </div>
   );
