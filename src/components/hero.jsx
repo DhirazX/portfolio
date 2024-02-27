@@ -13,10 +13,10 @@ const Hero = () => {
         <div className="hero-text">
           <div className="ht1">
             <motion.div className="ht1-1">A front end</motion.div>
-            <div className="ht1-2"></div>
+            {/* <div className="ht1-2"></div> */}
           </div>
           <div className="ht2">
-            <div className="ht2-2"> </div>
+            {/* <div className="ht2-2"> </div> */}
             <motion.div className="ht2-1">Web Developer</motion.div>
           </div>
         </div>

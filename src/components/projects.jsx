@@ -33,7 +33,7 @@ const Projects = ({ projectRef, isProjectVisible }) => {
               }`}
             >
               <div className="project-info-card ">
-                <div className="project-name">EasyCanteen</div>
+                <div className="project-name kakshya-title">कक्षा.</div>
                 <div className="project-info">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Illum assumenda quos suscipit impedit earum quisquam
@@ -48,7 +48,7 @@ const Projects = ({ projectRef, isProjectVisible }) => {
                   <div className="circle"></div>
                 </div>
                 <div className="card-inner">
-                  <img src={require("../images/easyCanteen.png")}></img>
+                  <img src={require("../images/Kakshya.png")}></img>
                 </div>
               </div>
             </div>
