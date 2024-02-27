@@ -2,7 +2,7 @@ import React from "react";
 import "./components.css";
 import { motion } from "framer-motion";
 
-const Hero = () => {
+const Hero = ({ textEnter, textLeave }) => {
   return (
     <div className="hero-wrapper">
       <div className="hero">
@@ -11,14 +11,20 @@ const Hero = () => {
           <motion.div className="it2">Dhiraj Poudel</motion.div>
         </div>
         <div className="hero-text">
-          <div className="ht1">
-            <motion.div className="ht1-1">A front end</motion.div>
-            {/* <div className="ht1-2"></div> */}
-          </div>
-          <div className="ht2">
-            {/* <div className="ht2-2"> </div> */}
-            <motion.div className="ht2-1">Web Developer</motion.div>
-          </div>
+          <motion.div
+            className="ht1"
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+          >
+            A front end
+          </motion.div>
+          <motion.div
+            className="ht2"
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+          >
+            Web Developer
+          </motion.div>
         </div>
         <div className="outro-text">
           <div className="ot1">Passionate</div>

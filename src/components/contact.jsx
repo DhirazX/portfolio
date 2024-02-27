@@ -4,11 +4,17 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 
-const Contact = () => {
+const Contact = ({ textEnter, textLeave }) => {
   return (
     <div className="contact-wrapper">
       <div className="contact-text-wrapper">
-        <div className="contact-title">HAVE AN IDEA?</div>
+        <div
+          className="contact-title"
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+        >
+          HAVE AN IDEA?
+        </div>
         <div className="email-text">drop me an email at</div>
         <a className="email" href="mailto: dhirajworkss@gmail.com">
           dhirajworkss@gmail.com

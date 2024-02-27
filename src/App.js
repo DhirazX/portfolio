@@ -11,15 +11,15 @@ function App() {
   const projectRef = useRef();
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [isProjectVisible, setIsProjectVisible] = useState(false);
-  const [cursor, setcursor] = useState({
+  const [cursor, setCursor] = useState({
     x: 0,
     y: 0,
   });
-
+  const [textVariants, setTextVariants] = useState("default");
   //cursor EventListener
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
-      setcursor({
+      setCursor({
         x: e.clientX,
         y: e.clientY,
       });
@@ -28,10 +28,19 @@ function App() {
 
   const cursorVariants = {
     default: {
-      x: cursor.x-12,
-      y: cursor.y-12,
+      x: cursor.x - 12,
+      y: cursor.y - 12,
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: cursor.x - 75,
+      y: cursor.y - 75,
     },
   };
+
+  const textEnter = () => setTextVariants("text");
+  const textLeave = () => setTextVariants("default");
 
   //observes about, project component
   useEffect(() => {
@@ -56,13 +65,13 @@ function App() {
       <motion.div
         className="cursor"
         variants={cursorVariants}
-        animate="default"
+        animate={textVariants}
       ></motion.div>
       <div className="App">
-        <Hero />
+        <Hero textEnter={textEnter} textLeave={textLeave} />
         <About aboutRef={aboutRef} isAboutVisible={isAboutVisible} />
         <Projects projectRef={projectRef} isProjectVisible={isProjectVisible} />
-        <Contact />
+        <Contact textEnter={textEnter} textLeave={textLeave}/>
       </div>
     </div>
   );
