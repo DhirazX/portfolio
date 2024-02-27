@@ -1,6 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+.cursor {
+  position: fixed;
+  z-index: 9999999;
+  background-color: black;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  pointer-events: none;
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
