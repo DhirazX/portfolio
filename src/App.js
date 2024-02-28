@@ -5,6 +5,7 @@ import Projects from "./components/projects";
 import Contact from "./components/contact";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa6";
 
 function App() {
   const aboutRef = useRef();
@@ -41,10 +42,16 @@ function App() {
       y: cursor.y - 75,
     },
     project: {
+      height: 110,
+      width: 110,
+      x: cursor.x - 110,
+      y: cursor.y - 110,
+    },
+    aboutImg: {
       height: 50,
-      width: 150,
-      x: cursor.x - 75,
-      y: cursor.y - 75,
+      width: 50,
+      x: cursor.x - 50,
+      y: cursor.y - 50,
     },
   };
 
@@ -55,7 +62,6 @@ function App() {
   const projectEnter = () => {
     setVariants("project");
     setCursorText("Visit Site");
-    cursorRef.current.style.borderRadius = "50px";
     cursorRef.current.style.mixBlendMode = "normal";
     cursorRef.current.style.backgroundColor = "black";
     cursorRef.current.style.border = "2px solid grey";
@@ -63,11 +69,23 @@ function App() {
   const projectLeave = () => {
     setVariants("default");
     setCursorText("");
-    cursorRef.current.style.borderRadius = "50%";
     cursorRef.current.style.mixBlendMode = "difference";
     cursorRef.current.style.backgroundColor = "white";
     cursorRef.current.style.border = "0px";
   };
+  const aboutImgEnter = () => {
+    setVariants("aboutImg");
+    cursorRef.current.style.mixBlendMode = "normal";
+    cursorRef.current.style.backgroundColor = "black";
+    cursorRef.current.style.border = "2px solid grey";
+  };
+  const aboutImgLeave = () => {
+    setVariants("default");
+    cursorRef.current.style.mixBlendMode = "difference";
+    cursorRef.current.style.backgroundColor = "white";
+    cursorRef.current.style.border = "0px";
+  };
+
   //observes about, project component
   useEffect(() => {
     const aboutObserver = new IntersectionObserver((entries) => {
@@ -95,10 +113,17 @@ function App() {
         animate={variants}
       >
         {cursorText}
+        {variants == "aboutImg" && <FaInstagram className="link-icon" />}
       </motion.div>
       <div className="App">
         <Hero textEnter={textEnter} textLeave={textLeave} />
-        <About aboutRef={aboutRef} isAboutVisible={isAboutVisible} />
+        <About
+          aboutRef={aboutRef}
+          isAboutVisible={isAboutVisible}
+          aboutImgEnter={aboutImgEnter}
+          aboutImgLeave={aboutImgLeave}
+          className="scroll-section"
+        />
         <Projects
           projectRef={projectRef}
           isProjectVisible={isProjectVisible}

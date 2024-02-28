@@ -1,13 +1,15 @@
 import React from "react";
 import "./components.css";
 
-const About = ({ aboutRef, isAboutVisible }) => {
+const About = ({ aboutRef, isAboutVisible, aboutImgEnter, aboutImgLeave }) => {
   return (
     <div className="about">
       <div className="about-img">
         <img
           src={require("../images/welcomecc.png")}
           className={`myimg hiddenLeft ${isAboutVisible && `show`}`}
+          onMouseEnter={aboutImgEnter}
+          onMouseLeave={aboutImgLeave}
         />
       </div>
       <div className="about-content" ref={aboutRef}>
