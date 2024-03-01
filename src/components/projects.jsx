@@ -37,6 +37,7 @@ const Projects = ({
                 isProjectVisible && `show`
               }`}
             >
+              <div className="award-banner">Esewa Webthon #1</div>
               <div className="project-info-card ">
                 <div className="project-name kakshya-title">कक्षा.</div>
                 <div className="project-info">
