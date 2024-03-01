@@ -35,10 +35,13 @@
   font-weight: 600;
 }
 .email-text {
-  margin-top: 10px;
+  font-family: monospace;
+  margin-top: 15px;
+  margin-bottom: 5px;
   font-size: var(--sub-text);
 }
 .email {
+  font-family: monospace;
   font-size: var(--sub-heading-text);
   text-decoration: none;
   color: var(--main-text-color);
@@ -66,7 +69,7 @@
     font-size: 1.8rem;
   }
   .contact-wrapper{
-    height: 50vh;
+    height: 60vh;
   }
 }
 @media screen and (max-width: 600px){

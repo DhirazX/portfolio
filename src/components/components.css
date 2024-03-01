@@ -28,6 +28,15 @@
   opacity: 1;
   transform: translateX(0);
 }
+.grid {
+  height: 16rem;
+  background-image:
+      linear-gradient(to right, rgb(203 213 225) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(203 213 225) 1px, transparent 1px);
+  background-size: 3.5rem 3.5rem;
+  background-position: center center;
+  z-index: -99;
+}
 .hero-wrapper {
   min-height: 100vh;
   background-color: var(--main-bg);
@@ -44,9 +53,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 30px;
   cursor: pointer;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .outro-text {
   margin-top: 2vh;
@@ -55,14 +68,13 @@
   display: flex;
   text-transform: uppercase;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   /* font-family: Arges heavy; */
   font-weight: 800;
 }
 .ht1,
 .ht2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   cursor: pointer;
   font-weight: 700;
   font-size: 9rem;
@@ -82,7 +94,7 @@
   color: var(--sub-text-color);
 }
 .about-img {
-  width: 50%;
+  width: 45%;
 }
 .myimg {
   width: 100%;
@@ -114,7 +126,7 @@
 }
 .about-text {
   width: 80%;
-  font-family: oswald;
+  font-family: monospace;
   font-size: var(--sub-text);
   transition: all 1s;
 }
@@ -147,6 +159,7 @@
   margin-right: 100px;
   transition: all 1s;
   gap: 30px;
+  font-family: monospace;
 }
 .award-banner {
   background-color: #eb4542;
@@ -162,27 +175,29 @@
   z-index: 99;
   clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
   border-top-right-radius: 10px;
+  font-family: oswald;
 }
-.award-banner-after{
+.award-banner-after {
   position: absolute;
   content: "";
   background-color: #7e2624;
   height: 20px;
   width: 10px;
   right: -10px;
-  top: 60px;
+  top: 55px;
   border-bottom-right-radius: 10px;
 }
 .project-name {
   font-size: var(--sub-heading-text);
   cursor: pointer;
+  font-family: oswald;
 }
 .project-info-card {
   width: 45%;
 }
 .project-info {
   margin-top: 2rem;
-  font-family: roboto;
+  font-size: 16px;
   /* font-size: var(--sub-text); */
 }
 .tech-stack {
@@ -307,9 +322,8 @@
   font-weight: 600;
   color: #cca061;
 }
-
 @media screen and (max-width: 1100px) {
-  .ht1-1,
+  /* .ht1-1,
   .ht2-1 {
     font-size: 4rem;
   }
@@ -330,7 +344,7 @@
   .intro-text,
   .outro-text {
     font-size: 20px;
-  }
+  } */
   .about {
     flex-direction: column;
   }
@@ -345,29 +359,12 @@
   .about-text {
     width: 100%;
   }
-}
-@media screen and (max-width: 900px) {
+  .award-banner {
+    width: 25%;
+  }
   .hiddenDown {
     opacity: 1;
-    transform: none;
-  }
-  .about {
-    overflow: hidden;
-  }
-  .about-content {
-    align-items: center;
-  }
-  .about-title {
-    font-size: 4rem;
-    margin-bottom: 10px;
-  }
-  .project-section-title {
-    padding: 20px;
-    font-size: 4rem;
-    text-align: center;
-  }
-  .projects-wrapper {
-    height: auto;
+    transform: translateX(0px);
   }
   .projects {
     position: unset;
@@ -383,12 +380,11 @@
   .project-info-card {
     width: 100%;
     margin: 0;
-    margin-bottom: 20px;
   }
   .cards {
     display: block;
-    overflow: hidden;
-    margin: 20px;
+    /* overflow: hidden; */
+    margin: 50px;
     /* padding-bottom: 10px; */
   }
   .card {
@@ -399,9 +395,40 @@
   .card-outer {
     margin: 8px;
   }
+  .project-section-title {
+    padding: 20px;
+    /* font-size: 4rem; */
+    text-align: center;
+  }
+  .projects-wrapper {
+    height: auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hiddenDown {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  .about {
+    overflow: hidden;
+  }
+  .about-content {
+    align-items: center;
+  }
+  .about-title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  .project-section-title {
+    font-size: 4rem;
+  }
   .circle {
     height: 10px;
     width: 10px;
+  }
+  .award-banner {
+    width: 35%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -465,5 +492,18 @@
   .circle {
     height: 8px;
     width: 8px;
+  }
+  .award-banner {
+    font-size: 14px;
+    width: 40%;
+  }
+  .award-banner-after {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .award-banner {
+    font-size: 14px;
+    width: 50%;
   }
 }

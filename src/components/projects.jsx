@@ -30,7 +30,7 @@ const Projects = ({
 
           <motion.div
             className="cards"
-            style={window.innerWidth > 900 && { x }}
+            style={window.innerWidth > 1100 && { x }}
           >
             <div
               className={`project-group  hiddenDown ${
@@ -40,7 +40,7 @@ const Projects = ({
               <div className="award-banner">Esewa Webthon #1</div>
               <div className="award-banner-after"></div>
               <div className="project-info-card ">
-                <div className="project-name kakshya-title">कक्षा.</div>
+                <div className="project-name kakshya-title">Kakshya</div>
                 <div className="project-info">
                   <p style={{ marginBottom: "10px" }}>
                     Made Within 6 hrs, Kakshya helped us win esewa webthon 2080
@@ -74,7 +74,7 @@ const Projects = ({
                   <div className="circle"></div>
                 </div>
                 <div className="card-inner">
-                  <img src={require("../images/Kakshya.png")}></img>
+                  <img src={require("../images/kakshya-banner2.png")}></img>
                 </div>
               </div>
             </div>

@@ -1,12 +1,13 @@
 import React from "react";
 import "./contact.css";
+import "./components.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 
 const Contact = ({ textEnter, textLeave }) => {
   return (
-    <div className="contact-wrapper">
+    <div className="contact-wrapper grid">
       <div className="contact-text-wrapper">
         <div
           className="contact-title"
