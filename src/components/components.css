@@ -30,9 +30,12 @@
 }
 .grid {
   height: 16rem;
-  background-image:
-      linear-gradient(to right, rgb(203 213 225) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(203 213 225) 1px, transparent 1px);
+  background-image: linear-gradient(
+      to right,
+      rgb(203 213 225) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(203 213 225) 1px, transparent 1px);
   background-size: 3.5rem 3.5rem;
   background-position: center center;
   z-index: -99;
@@ -60,6 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .outro-text {
   margin-top: 2vh;
@@ -323,28 +327,14 @@
   color: #cca061;
 }
 @media screen and (max-width: 1100px) {
-  /* .ht1-1,
-  .ht2-1 {
-    font-size: 4rem;
-  }
-  .ht1 {
-    flex-direction: column;
-    align-items: baseline;
-  }
-  .ht1-2 {
-    width: 100%;
-  }
-  .ht2-2 {
-    display: none;
-  }
+  .ht1,
   .ht2 {
-    flex-direction: column-reverse;
-    align-items: baseline;
+    font-size: 7rem;
   }
   .intro-text,
   .outro-text {
-    font-size: 20px;
-  } */
+    font-size: 25px;
+  }
   .about {
     flex-direction: column;
   }
@@ -409,7 +399,17 @@
     opacity: 1;
     transform: translateX(0px);
   }
-
+  .ht1,
+  .ht2 {
+    font-size: 5rem;
+  }
+  .intro-text,
+  .outro-text {
+    font-size: 20px;
+  }
+  .ht1 {
+    margin-bottom: -10px;
+  }
   .about {
     overflow: hidden;
   }
@@ -430,35 +430,28 @@
   .award-banner {
     width: 35%;
   }
+  .cards{
+    margin: 30px;
+  }
 }
 @media screen and (max-width: 600px) {
-  .intro-text {
-    font-size: 12px;
+  .grid{
+    background-size: 2.5rem 2.5rem;
   }
-  .intro-text {
-    justify-content: flex-start;
+  .ht1,
+  .ht2 {
+    font-size: 4rem;
   }
-  .it2 {
-    margin-left: 10px;
+  .intro-text,
+  .outro-text {
+    font-size: 18px;
   }
-  .ht1-1,
-  .ht2-1 {
-    font-size: 3rem;
-  }
-  .ht1-2 {
-    height: 50px;
-    width: 100%;
+  .ht1 {
+    margin-bottom: -10px;
   }
   .projects-wrapper {
     overflow: hidden;
   }
-  /* .cards {
-    overflow: hidden;
-  } */
-  .outro-text {
-    font-size: 12px;
-  }
-
   .about-img {
     width: 80%;
   }
@@ -502,6 +495,20 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .ht1,
+  .ht2 {
+    font-size: 2.5rem;
+  }
+  .intro-text,
+  .outro-text {
+    font-size: 14px;
+  }
+  .outro-text {
+    padding: 0 10%;
+  }
+  .ht1 {
+    margin-bottom: -10px;
+  }
   .award-banner {
     font-size: 14px;
     width: 50%;
