@@ -38,14 +38,30 @@ const Projects = ({
               }`}
             >
               <div className="award-banner">Esewa Webthon #1</div>
+              <div className="award-banner-after"></div>
               <div className="project-info-card ">
                 <div className="project-name kakshya-title">कक्षा.</div>
                 <div className="project-info">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Illum assumenda quos suscipit impedit earum quisquam
-                  asperiores inventore delectus! Eos iure alias optio officiis
-                  vero vel error rem ab voluptate quod?
+                  <p style={{ marginBottom: "10px" }}>
+                    Made Within 6 hrs, Kakshya helped us win esewa webthon 2080
+                    organized by Instinct Nepal.
+                  </p>
+                  <p>
+                    Kakshya is a web application that uses AI to take smart
+                    notes. It can record classroom lectures, summarize content,
+                    and save key points. Users can also categorize their classes
+                    and recordings for easy access.
+                  </p>
+                  <div className="tech-stack">
+                    <div className="tech-language">Html</div>
+                    <div className="tech-language">CSS</div>
+                    <div className="tech-language">Javascript</div>
+                    <div className="tech-language">Django</div>
+                  </div>
                 </div>
+                {/* <div className="redirect-btns">
+                  <button>THISIS</button>
+                </div> */}
               </div>
               <div
                 className="card"

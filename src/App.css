@@ -33,6 +33,6 @@ body::-webkit-scrollbar-thumb {
   /* filter: invert(1)  grayscale(1) contrast(2); */
   pointer-events: none;
 }
-.link-icon{
+.link-icon {
   font-size: 25px;
 }

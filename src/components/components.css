@@ -146,11 +146,12 @@
   border-radius: 10px;
   margin-right: 100px;
   transition: all 1s;
+  gap: 30px;
 }
 .award-banner {
-  background-color: #de403e;
+  background-color: #eb4542;
   position: absolute;
-  right: 0;
+  right: -10px;
   top: 30px;
   padding: 3px;
   padding-left: 40px;
@@ -160,18 +161,48 @@
   width: 20%;
   z-index: 99;
   clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+  border-top-right-radius: 10px;
 }
-  .project-name {
+.award-banner-after{
+  position: absolute;
+  content: "";
+  background-color: #7e2624;
+  height: 20px;
+  width: 10px;
+  right: -10px;
+  top: 60px;
+  border-bottom-right-radius: 10px;
+}
+.project-name {
   font-size: var(--sub-heading-text);
+  cursor: pointer;
 }
 .project-info-card {
-  background: none;
-  width: 35%;
-  margin-right: 100px;
+  width: 45%;
 }
 .project-info {
   margin-top: 2rem;
-  font-size: var(--sub-text);
+  font-family: roboto;
+  /* font-size: var(--sub-text); */
+}
+.tech-stack {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.tech-language {
+  display: inline-block;
+  background-color: var(--gray-bg);
+  padding: 5px 8px;
+  margin-right: 5px;
+  border-radius: 3px;
+  color: grey;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.tech-language:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.02);
 }
 .cards {
   display: grid;
@@ -184,7 +215,7 @@
 .card {
   background-color: var(--gray-bg);
   /* margin-right: 100px; */
-  width: 45vw;
+  width: 48vw;
   height: 60vh;
   border-radius: 20px 20px 10px 10px;
   display: flex;
