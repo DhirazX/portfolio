@@ -6,6 +6,10 @@ const Hero = ({ textEnter, textLeave }) => {
   return (
     <div className="hero-wrapper grid">
       <div className="hero">
+        {/* <div className="online-banner">
+          <p className="online-banner-text">Open For Collaborations</p>
+          <span className="online-icon"></span>
+        </div> */}
         <div className="intro-text">
           <motion.div className="it1">Hey, I am Dhiraj Poudel</motion.div>
           {/* <motion.div className="it2">Dhiraj Poudel</motion.div> */}
@@ -27,7 +31,7 @@ const Hero = ({ textEnter, textLeave }) => {
           </motion.div>
         </div>
         <div className="outro-text">
-          Passionate About Creating Unforgettable Experiences
+          Passionate about creating unforgettable experiences
           {/* <div className="ot1">Passionate</div>
           <div className="ot2">About</div>
           <div className="ot3">Creating</div>

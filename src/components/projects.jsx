@@ -84,12 +84,23 @@ const Projects = ({
               }`}
             >
               <div className="project-info-card ">
-                <div className="project-name">EasyCanteen</div>
+                <div className="project-name ocr-title">
+                  <span className="ocr-title-green">OCR</span>Compiler
+                </div>
                 <div className="project-info">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Illum assumenda quos suscipit impedit earum quisquam
-                  asperiores inventore delectus! Eos iure alias optio officiis
-                  vero vel error rem ab voluptate quod?
+                  OCR Compiler is a web application designed to streamline the
+                  process of working with handwritten code. Leveraging the power
+                  of Optical Character Recognition (OCR) technology, this
+                  project aims to bridge the gap between analog and digital
+                  programming by enabling users to scan handwritten code,
+                  convert it to editable text, prettify the code, and ultimately
+                  compile it.
+                </div>
+                <div className="tech-stack">
+                  <div className="tech-language">ReactJS</div>
+                  <div className="tech-language">CSS</div>
+                  <div className="tech-language">Python</div>
+                  <div className="tech-language">Tesseract</div>
                 </div>
               </div>
               <div
@@ -103,7 +114,7 @@ const Projects = ({
                   <div className="circle"></div>
                 </div>
                 <div className="card-inner">
-                  <img src={require("../images/easyCanteen.png")}></img>
+                  <img src={require("../images/ocrcompiler2.png")}></img>
                 </div>
               </div>
             </div>

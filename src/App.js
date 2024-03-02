@@ -19,6 +19,7 @@ function App() {
   const [cursorText, setCursorText] = useState("");
   const [variants, setVariants] = useState("default");
   const cursorRef = useRef();
+  const [pageNo, setPageNo] = useState(0);
 
   //cursor EventListener
   useEffect(() => {
@@ -34,6 +35,8 @@ function App() {
     default: {
       x: cursor.x - 12,
       y: cursor.y - 12,
+      // height: 0,
+      // width: 0
     },
     text: {
       height: 150,
@@ -115,6 +118,7 @@ function App() {
         {cursorText}
         {variants == "aboutImg" && <FaInstagram className="link-icon" />}
       </motion.div>
+      
       <div className="App">
         <Hero textEnter={textEnter} textLeave={textLeave} />
         <About
