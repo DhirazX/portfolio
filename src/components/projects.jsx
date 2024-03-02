@@ -74,7 +74,10 @@ const Projects = ({
                   <div className="circle"></div>
                 </div>
                 <div className="card-inner">
-                  <img src={require("../images/kakshya-banner2.png")}></img>
+                  <img
+                    src={require("../images/kakshyaadvert2.png")}
+                    alt="Kakshya-Banner"
+                  ></img>
                 </div>
               </div>
             </div>
@@ -114,7 +117,10 @@ const Projects = ({
                   <div className="circle"></div>
                 </div>
                 <div className="card-inner">
-                  <img src={require("../images/ocrcompiler2.png")}></img>
+                  <img
+                    src={require("../images/ocrcompiler2.png")}
+                    alt="ocrcompiler-banner"
+                  ></img>
                 </div>
               </div>
             </div>
@@ -124,7 +130,7 @@ const Projects = ({
               }`}
             >
               <div className="project-info-card ">
-                <div className="project-name">EasyCanteen</div>
+                <div className="project-name easycanteen-title">Easy<span className="easycanteen-title-green">Canteen</span></div>
                 <div className="project-info">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Illum assumenda quos suscipit impedit earum quisquam
@@ -143,7 +149,10 @@ const Projects = ({
                   <div className="circle"></div>
                 </div>
                 <div className="card-inner">
-                  <img src={require("../images/easyCanteen.png")}></img>
+                  <img
+                    src={require("../images/easycanteenadvert.png")}
+                    alt="easycanteen-banner"
+                  ></img>
                 </div>
               </div>
             </div>

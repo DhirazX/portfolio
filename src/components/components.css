@@ -350,12 +350,16 @@
   font-weight: 600;
   color: #cca061;
 }
-.ocr-title{
+.ocr-title,.easycanteen-title{
   font-weight: 600;
 }
 .ocr-title-green{
   color: #42B065;
 }
+.easycanteen-title-green{
+  color: #2BCC3E;
+}
+
 @media screen and (max-width: 1100px) {
   .ht1,
   .ht2 {
