@@ -19,7 +19,6 @@ function App() {
   const [cursorText, setCursorText] = useState("");
   const [variants, setVariants] = useState("default");
   const cursorRef = useRef();
-  const [pageNo, setPageNo] = useState(0);
 
   //cursor EventListener
   useEffect(() => {
@@ -116,9 +115,9 @@ function App() {
         animate={variants}
       >
         {cursorText}
-        {variants == "aboutImg" && <FaInstagram className="link-icon" />}
+        {variants === "aboutImg" && <FaInstagram className="link-icon" />}
       </motion.div>
-      
+
       <div className="App">
         <Hero textEnter={textEnter} textLeave={textLeave} />
         <About

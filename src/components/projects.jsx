@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import "./components.css";
 
@@ -13,7 +13,7 @@ const Projects = ({
     target: targetRef,
   });
   const x = useTransform(scrollYProgress, [0, 1], ["0", "-150%"]);
-  let y;
+
   window.innerWidth > 900 && console.log(window.innerWidth);
   return (
     <div>
@@ -130,7 +130,9 @@ const Projects = ({
               }`}
             >
               <div className="project-info-card ">
-                <div className="project-name easycanteen-title">Easy<span className="easycanteen-title-green">Canteen</span></div>
+                <div className="project-name easycanteen-title">
+                  Easy<span className="easycanteen-title-green">Canteen</span>
+                </div>
                 <div className="project-info">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Illum assumenda quos suscipit impedit earum quisquam
