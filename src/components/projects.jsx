@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
+import { FaAnglesDown } from "react-icons/fa6";
 import "./components.css";
 
 const Projects = ({
@@ -25,7 +26,10 @@ const Projects = ({
             }`}
             ref={projectRef}
           >
-            Projects
+            <span>Projects</span>
+            <div className="scroll-down">
+              Scroll Down <FaAnglesDown className="scroll-down-icon"/>
+            </div>
           </div>
 
           <motion.div
@@ -134,10 +138,20 @@ const Projects = ({
                   Easy<span className="easycanteen-title-green">Canteen</span>
                 </div>
                 <div className="project-info">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Illum assumenda quos suscipit impedit earum quisquam
-                  asperiores inventore delectus! Eos iure alias optio officiis
-                  vero vel error rem ab voluptate quod?
+                  <p style={{ marginBottom: "10px" }}>
+                    Easy Canteen, my inaugural university project, was born from
+                    a desire to tackle a prevalent issue on campus.
+                  </p>
+                  <p>
+                    This web application revolutionizes the food ordering
+                    experience on campuses by introducing a token system,
+                    effectively eliminating long queues.
+                  </p>
+                </div>
+                <div className="tech-stack">
+                  <div className="tech-language">Html</div>
+                  <div className="tech-language">CSS</div>
+                  <div className="tech-language">Javascript</div>
                 </div>
               </div>
               <div

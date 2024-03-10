@@ -17,10 +17,11 @@ const About = ({ aboutRef, isAboutVisible, aboutImgEnter, aboutImgLeave }) => {
           About
         </div>
         <div className={`about-text hiddenRight ${isAboutVisible && `show`}`}>
-          LLorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-          ratione perspiciatis quaerat, ullam eligendi nesciunt doloribus,
-          officia numquam aspernatur harum labore nihil architecto commodi quo
-          aliquid delectus nostrum modi amet.
+          I am Dhiraj Poudel, a software engineering student with a passion for
+          creativity in digital spaces. I specialize in bringing ideas to life
+          through captivating visuals and thoughtful typography. I am constantly
+          exploring new ways to blend technology with artistry to create
+          engaging and meaningful experiences.
         </div>
       </div>
     </div>
