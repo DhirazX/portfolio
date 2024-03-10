@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.de3617da.css",
-    "main.js": "/portfolio/static/js/main.deed6bd3.js",
-    "static/media/welcomecc.png": "/portfolio/static/media/welcomecc.14e5fae60c9d93282b03.png",
-    "static/media/easycanteenadvert.png": "/portfolio/static/media/easycanteenadvert.786b915616e343cfef29.png",
-    "static/media/kakshyaadvert2.png": "/portfolio/static/media/kakshyaadvert2.d57c0a704079bc4b26b4.png",
-    "static/media/ocrcompiler2.png": "/portfolio/static/media/ocrcompiler2.e1e6ddbf2d9945a64330.png",
-    "index.html": "/portfolio/index.html",
-    "main.de3617da.css.map": "/portfolio/static/css/main.de3617da.css.map",
-    "main.deed6bd3.js.map": "/portfolio/static/js/main.deed6bd3.js.map"
+    "main.css": "/static/css/main.de3617da.css",
+    "main.js": "/static/js/main.ad6460de.js",
+    "static/media/welcomecc.png": "/static/media/welcomecc.14e5fae60c9d93282b03.png",
+    "static/media/easycanteenadvert.png": "/static/media/easycanteenadvert.786b915616e343cfef29.png",
+    "static/media/kakshyaadvert2.png": "/static/media/kakshyaadvert2.d57c0a704079bc4b26b4.png",
+    "static/media/ocrcompiler2.png": "/static/media/ocrcompiler2.e1e6ddbf2d9945a64330.png",
+    "index.html": "/index.html",
+    "main.de3617da.css.map": "/static/css/main.de3617da.css.map",
+    "main.ad6460de.js.map": "/static/js/main.ad6460de.js.map"
   },
   "entrypoints": [
     "static/css/main.de3617da.css",
-    "static/js/main.deed6bd3.js"
+    "static/js/main.ad6460de.js"
   ]
 }
