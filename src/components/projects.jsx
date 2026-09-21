@@ -15,9 +15,9 @@ const Projects = ({ projectEnter, projectLeave }) => {
   return (
     <Section title="Projects" index="02" accent={accents.projects}>
       <Entry
-        eyebrow="Built from scratch"
+        eyebrow="Retrieval system"
         title="Hybrid RAG and Information Retrieval Engine from Scratch"
-        link={github("RAG-from-scratch")}
+        link={github("hybrid-rag-retrieval-engine")}
         bullets={[
           "Built a **hybrid retrieval system** in pure Python, without high-level framework abstractions.",
           "Implemented **lexical search with BM25Okapi** for length-normalized keyword ranking, and **dense semantic search** with sentence-transformers and NumPy matrix dot products.",
@@ -27,9 +27,21 @@ const Projects = ({ projectEnter, projectLeave }) => {
         tags={["Python", "BM25", "Sentence-Transformers", "NumPy", "RRF", "Gemini API"]}
       />
       <Entry
-        eyebrow="Built from scratch"
+        eyebrow="Paper reimplementation"
+        title="LLM Watermarking for Text Summarization"
+        link={github("watermarking-llm-summaries")}
+        bullets={[
+          "Reimplemented a **token-level LLM watermarking algorithm (Kirchenbauer et al., 2023)** and applied it to a **pretrained BART summarizer** on the CNN/DailyMail dataset.",
+          "Implemented **green/red vocabulary partitioning** seeded by prior-token hashing to bias next-token logits during generation, without modifying model weights.",
+          "Built a **statistical detector** using **z-score hypothesis testing** to identify watermarked text without needing access to the underlying model.",
+          "Evaluated the quality-detectability trade-off with **ROUGE-1/2/L**, reaching average detection z-scores of **~4.1 for watermarked summaries vs ~0 for plain text**, with **minimal (~1%) ROUGE degradation**.",
+        ]}
+        tags={["Python", "PyTorch", "Transformers", "BART", "ROUGE", "Statistical Detection"]}
+      />
+      <Entry
+        eyebrow="ML fundamentals"
         title="ML from Scratch"
-        link={github("ML-from-scratch")}
+        link={github("ML-fundamentals")}
         bullets={[
           "Implemented **core machine learning algorithms from first principles** to understand the underlying mathematics.",
           "Built **linear regression** and **count-based word embeddings** without high-level ML libraries.",

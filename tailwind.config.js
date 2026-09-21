@@ -14,7 +14,7 @@ module.exports = {
     fontFamily: {
       ...defaultTheme.fontFamily,
       oswald: ["Oswald", "sans-serif"],
-      mono: ["monospace"],
+      mono: ["IBM Plex Mono", "monospace"],
     },
     extend: {
       colors: {

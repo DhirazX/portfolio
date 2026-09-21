@@ -16,7 +16,7 @@ const interests = [
 // the whole page in five lines, each one jumps to its section
 const overview = [
   { id: "publications", n: "01", title: "Publications", lines: ["LDA query refinement", "ICICSET 2025"] },
-  { id: "projects", n: "02", title: "Projects", lines: ["Hybrid RAG engine", "ML from scratch"] },
+  { id: "projects", n: "02", title: "Projects", lines: ["Hybrid RAG engine", "LLM watermarking", "ML from scratch"] },
   { id: "education", n: "03", title: "Education", lines: ["Software Engineering", "Bachelor’s · 2025"] },
   { id: "experience", n: "04", title: "Experience", lines: ["Software Engineer", "2024–2026"] },
   { id: "skills", n: "05", title: "Skills", lines: ["Python · PyTorch", "NLP · IR"] },
@@ -66,11 +66,12 @@ const Hero = ({ textEnter, textLeave }) => {
             Aspiring NLP Researcher · Software Engineering graduate
           </div>
           <p className="mt-[1.2rem] max-w-[40rem] font-mono text-[16px] leading-[1.6] max900:mx-auto max500:text-[0.9rem]">
-            Search engines are great at matching words and terrible at meaning.
-            I work on the second part: topic models, hybrid retrieval, and
-            neural nets built from scratch, because I don’t trust anything I
-            couldn’t rebuild in NumPy. First paper out at ICICSET 2025, more
-            questions than answers since.
+            I work on natural language processing and information retrieval,
+            mostly the parts where systems have to figure out what something
+            means, not just what it says. A lot of what’s here started as me
+            building things from scratch to actually understand how they work,
+            before reaching for the libraries that do it faster. First paper
+            published at ICICSET 2025.
           </p>
           <div className="mt-6 flex flex-wrap gap-2 max900:justify-center">
             {interests.map((interest) => (
