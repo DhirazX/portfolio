@@ -1,181 +1,44 @@
-import React, { useRef } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
-import { FaAnglesDown } from "react-icons/fa6";
-import "./components.css";
+import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import Section, { accents } from "./section";
+import Entry from "./entry";
 
-const Projects = ({
-  projectRef,
-  isProjectVisible,
-  projectEnter,
-  projectLeave,
-}) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
+const Projects = ({ projectEnter, projectLeave }) => {
+  const github = (repo) => ({
+    href: `https://github.com/DhirazX/${repo}`,
+    label: `DhirazX/${repo}`,
+    before: <FaGithub />,
+    after: <FaArrowUpRightFromSquare />,
+    onEnter: projectEnter,
+    onLeave: projectLeave,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["0", "-150%"]);
 
-  window.innerWidth > 900 && console.log(window.innerWidth);
   return (
-    <div>
-      <div className="projects-wrapper" ref={targetRef}>
-        <div className="projects">
-          <div
-            className={`project-section-title hiddenLeft ${
-              isProjectVisible && `show`
-            }`}
-            ref={projectRef}
-          >
-            <span>Projects</span>
-            <div className="scroll-down">
-              Scroll Down <FaAnglesDown className="scroll-down-icon"/>
-            </div>
-          </div>
-
-          <motion.div
-            className="cards"
-            style={window.innerWidth > 1100 && { x }}
-          >
-            <div
-              className={`project-group  hiddenDown ${
-                isProjectVisible && `show`
-              }`}
-            >
-              <div className="award-banner">Esewa Webthon #1</div>
-              <div className="award-banner-after"></div>
-              <div className="project-info-card ">
-                <div className="project-name kakshya-title">Kakshya</div>
-                <div className="project-info">
-                  <p style={{ marginBottom: "10px" }}>
-                    Made Within 6 hrs, Kakshya helped us win esewa webthon 2080
-                    organized by Instinct Nepal.
-                  </p>
-                  <p>
-                    Kakshya is a web application that uses AI to take smart
-                    notes. It can record classroom lectures, summarize content,
-                    and save key points. Users can also categorize their classes
-                    and recordings for easy access.
-                  </p>
-                  <div className="tech-stack">
-                    <div className="tech-language">Html</div>
-                    <div className="tech-language">CSS</div>
-                    <div className="tech-language">Javascript</div>
-                    <div className="tech-language">Django</div>
-                  </div>
-                </div>
-                {/* <div className="redirect-btns">
-                  <button>THISIS</button>
-                </div> */}
-              </div>
-              <div
-                className="card"
-                onMouseEnter={projectEnter}
-                onMouseLeave={projectLeave}
-              >
-                <div className="card-outer">
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                </div>
-                <div className="card-inner">
-                  <img
-                    src={require("../images/kakshyaadvert2.png")}
-                    alt="Kakshya-Banner"
-                  ></img>
-                </div>
-              </div>
-            </div>
-            <div
-              className={`project-group  hiddenDown ${
-                isProjectVisible && `show`
-              }`}
-            >
-              <div className="project-info-card ">
-                <div className="project-name ocr-title">
-                  <span className="ocr-title-green">OCR</span>Compiler
-                </div>
-                <div className="project-info">
-                  OCR Compiler is a web application designed to streamline the
-                  process of working with handwritten code. Leveraging the power
-                  of Optical Character Recognition (OCR) technology, this
-                  project aims to bridge the gap between analog and digital
-                  programming by enabling users to scan handwritten code,
-                  convert it to editable text, prettify the code, and ultimately
-                  compile it.
-                </div>
-                <div className="tech-stack">
-                  <div className="tech-language">ReactJS</div>
-                  <div className="tech-language">CSS</div>
-                  <div className="tech-language">Python</div>
-                  <div className="tech-language">Tesseract</div>
-                </div>
-              </div>
-              <div
-                className="card"
-                onMouseEnter={projectEnter}
-                onMouseLeave={projectLeave}
-              >
-                <div className="card-outer">
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                </div>
-                <div className="card-inner">
-                  <img
-                    src={require("../images/ocrcompiler2.png")}
-                    alt="ocrcompiler-banner"
-                  ></img>
-                </div>
-              </div>
-            </div>
-            <div
-              className={`project-group  hiddenDown ${
-                isProjectVisible && `show`
-              }`}
-            >
-              <div className="project-info-card ">
-                <div className="project-name easycanteen-title">
-                  Easy<span className="easycanteen-title-green">Canteen</span>
-                </div>
-                <div className="project-info">
-                  <p style={{ marginBottom: "10px" }}>
-                    Easy Canteen, my inaugural university project, was born from
-                    a desire to tackle a prevalent issue on campus.
-                  </p>
-                  <p>
-                    This web application revolutionizes the food ordering
-                    experience on campuses by introducing a token system,
-                    effectively eliminating long queues.
-                  </p>
-                </div>
-                <div className="tech-stack">
-                  <div className="tech-language">Html</div>
-                  <div className="tech-language">CSS</div>
-                  <div className="tech-language">Javascript</div>
-                </div>
-              </div>
-              <div
-                className="card"
-                onMouseEnter={projectEnter}
-                onMouseLeave={projectLeave}
-              >
-                <div className="card-outer">
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                </div>
-                <div className="card-inner">
-                  <img
-                    src={require("../images/easycanteenadvert.png")}
-                    alt="easycanteen-banner"
-                  ></img>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </div>
+    <Section title="Projects" index="02" accent={accents.projects}>
+      <Entry
+        eyebrow="Built from scratch"
+        title="Hybrid RAG and Information Retrieval Engine from Scratch"
+        link={github("RAG-from-scratch")}
+        bullets={[
+          "Built a **hybrid retrieval system** in pure Python, without high-level framework abstractions.",
+          "Implemented **lexical search with BM25Okapi** for length-normalized keyword ranking, and **dense semantic search** with sentence-transformers and NumPy matrix dot products.",
+          "Fused the candidate lists with **Reciprocal Rank Fusion (RRF)** before passing prompts to the Google Gemini API.",
+          "Constructed a **synthetic corporate policy dataset** with custom YAML metadata headers to evaluate metadata pre-filtering and prevent parametric memory leakage.",
+        ]}
+        tags={["Python", "BM25", "Sentence-Transformers", "NumPy", "RRF", "Gemini API"]}
+      />
+      <Entry
+        eyebrow="Built from scratch"
+        title="ML from Scratch"
+        link={github("ML-from-scratch")}
+        bullets={[
+          "Implemented **core machine learning algorithms from first principles** to understand the underlying mathematics.",
+          "Built **linear regression** and **count-based word embeddings** without high-level ML libraries.",
+          "Designed **neural networks** with forward and backward propagation from scratch, reaching **89.3% test accuracy on MNIST**.",
+          "Focused on numerical computation, optimization and model evaluation.",
+        ]}
+        tags={["Python", "NumPy", "Neural Networks", "Backpropagation", "Word Embeddings", "MNIST"]}
+      />
+    </Section>
   );
 };
 
