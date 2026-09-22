@@ -16,7 +16,7 @@ const Projects = ({ projectEnter, projectLeave }) => {
     <Section title="Projects" index="02" accent={accents.projects}>
       <Entry
         eyebrow="Retrieval system"
-        title="Hybrid RAG and Information Retrieval Engine from Scratch"
+        title="Hybrid RAG and Information Retrieval Engine"
         link={github("hybrid-rag-retrieval-engine")}
         bullets={[
           "Built a **hybrid retrieval system** in pure Python, without high-level framework abstractions.",
