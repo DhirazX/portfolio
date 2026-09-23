@@ -1,5 +1,5 @@
 const Chip = ({ icon: Icon, children }) => (
-  <div className="inline-flex items-center gap-1.5 rounded-full bg-black/[0.07] px-3 py-[5px] font-mono text-[14px] transition-colors duration-300 hover:bg-black/[0.13] max500:text-[12px]">
+  <div className="inline-flex items-center gap-1.5 border border-rule px-2.5 py-1 text-[13px] text-ink transition-colors duration-150 hover:bg-black/[0.05] max500:text-[12px]">
     {Icon && <Icon />}
     {children}
   </div>

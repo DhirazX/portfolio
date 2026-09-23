@@ -1,8 +1,8 @@
-import Section, { accents } from "./section";
+import Section from "./section";
 import Entry from "./entry";
 
 const Experience = () => (
-  <Section title="Experience" index="04" accent={accents.experience}>
+  <Section title="Experience" index="04">
     <Entry
       eyebrow="May 2024 — Aug 2026"
       title="Software Engineer"

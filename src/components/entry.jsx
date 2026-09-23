@@ -12,15 +12,15 @@ const emphasize = (text) =>
 const Entry = ({ eyebrow, title, subtitle, tags, link, bullets, children }) => (
   <motion.div
     className="flex justify-between gap-12 font-mono max900:flex-col max900:gap-5"
-    {...reveal(60)}
+    {...reveal(40)}
   >
     <div className="w-[42%] max900:w-full">
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h3 className="font-oswald text-[2rem] font-semibold leading-[1.15] max600:text-[1.6rem]">
+      <h3 className="text-[1.3rem] font-bold leading-[1.25] max600:text-[1.1rem]">
         {title}
       </h3>
       {subtitle && (
-        <div className="mt-3 text-[14px] italic leading-[1.5] text-[#555] max500:text-[13px]">
+        <div className="mt-2 text-[14px] italic leading-[1.5] text-muted max500:text-[13px]">
           {subtitle}
         </div>
       )}
@@ -33,12 +33,10 @@ const Entry = ({ eyebrow, title, subtitle, tags, link, bullets, children }) => (
       )}
       {link && (
         <a
-          className="mt-5 inline-flex items-center gap-2 rounded-[3px] border border-black px-[18px] py-2.5 text-[15px] text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-black hover:text-white max500:px-3.5 max500:py-2 max500:text-[14px]"
+          className="mt-5 inline-flex items-center gap-2 border border-ink px-4 py-2 text-[14px] text-ink no-underline transition-colors duration-150 hover:bg-ink hover:text-white max500:px-3.5 max500:py-1.5 max500:text-[13px]"
           href={link.href}
           target="_blank"
           rel="noreferrer"
-          onMouseEnter={link.onEnter}
-          onMouseLeave={link.onLeave}
         >
           {link.before} {link.label} {link.after}
         </a>
@@ -47,9 +45,12 @@ const Entry = ({ eyebrow, title, subtitle, tags, link, bullets, children }) => (
 
     <div className="w-[52%] max900:w-full">
       {bullets ? (
-        <ul className="list-disc space-y-2.5 pl-5 text-[16px] leading-[1.6] max500:text-[0.9rem]">
+        <ul className="space-y-2.5 text-[15px] leading-[1.6] max500:text-[0.9rem]">
           {bullets.map((b) => (
-            <li key={b}>{emphasize(b)}</li>
+            <li className="flex gap-2.5" key={b}>
+              <span className="text-muted">-</span>
+              <span>{emphasize(b)}</span>
+            </li>
           ))}
         </ul>
       ) : (

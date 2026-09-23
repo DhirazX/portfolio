@@ -1,5 +1,6 @@
-import Section, { accents } from "./section";
+import Section from "./section";
 import Entry from "./entry";
+import Eyebrow from "./eyebrow";
 import Chip from "./chip";
 
 const coursework = [
@@ -12,16 +13,14 @@ const coursework = [
 ];
 
 const Education = () => (
-  <Section title="Education" index="03" accent={accents.education}>
+  <Section title="Education" index="03">
     <Entry
       eyebrow="2021 — 2025"
       title="Bachelor’s in Software Engineering"
       subtitle="Nepal College of Information and Technology"
     >
-      <div className="text-[13px] uppercase tracking-[0.12em] text-[#555]">
-        Relevant coursework
-      </div>
-      <div className="mt-3 flex flex-wrap gap-2">
+      <Eyebrow>relevant coursework</Eyebrow>
+      <div className="flex flex-wrap gap-2">
         {coursework.map((course) => (
           <Chip key={course}>{course}</Chip>
         ))}

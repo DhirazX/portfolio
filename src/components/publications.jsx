@@ -1,9 +1,9 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import Section, { accents } from "./section";
+import Section from "./section";
 import Entry from "./entry";
 
 const Publications = () => (
-  <Section title="Publications" index="01" accent={accents.publications}>
+  <Section title="Publications" index="01">
     <Entry
       eyebrow="2025 — Conference paper"
       title="Query Refinement using Latent Dirichlet Allocation"
