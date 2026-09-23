@@ -22,9 +22,9 @@ module.exports = {
         line: "rgba(255, 255, 255, 0.162)",
       },
       backgroundImage: {
-        grid: "linear-gradient(to right, rgb(203 213 225 / 0.6) 1px, transparent 1px), linear-gradient(to bottom, rgb(203 213 225 / 0.6) 1px, transparent 1px)",
+        grid: "linear-gradient(to right, rgb(203 213 225 / 0.32) 1px, transparent 1px), linear-gradient(to bottom, rgb(203 213 225 / 0.32) 1px, transparent 1px)",
         "grid-sm":
-          "linear-gradient(to right, rgb(203 213 225 / 0.5) 1px, transparent 1px), linear-gradient(to bottom, rgb(203 213 225 / 0.5) 1px, transparent 1px)",
+          "linear-gradient(to right, rgb(203 213 225 / 0.27) 1px, transparent 1px), linear-gradient(to bottom, rgb(203 213 225 / 0.27) 1px, transparent 1px)",
       },
       transitionTimingFunction: {
         DEFAULT: "ease",

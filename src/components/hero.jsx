@@ -16,7 +16,7 @@ const interests = [
 // the whole page in five lines, each one jumps to its section
 const overview = [
   { id: "publications", n: "01", title: "Publications", lines: ["LDA query refinement", "ICICSET 2025"] },
-  { id: "projects", n: "02", title: "Projects", lines: ["Hybrid RAG engine", "LLM watermarking", "ML from scratch"] },
+  { id: "projects", n: "02", title: "Projects", lines: ["Hybrid RAG engine", "Watermarking · ML basics", "Kakshya"] },
   { id: "education", n: "03", title: "Education", lines: ["Software Engineering", "Bachelor’s · 2025"] },
   { id: "experience", n: "04", title: "Experience", lines: ["Software Engineer", "2024–2026"] },
   { id: "skills", n: "05", title: "Skills", lines: ["Python · PyTorch", "NLP · IR"] },

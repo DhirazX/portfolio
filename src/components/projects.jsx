@@ -50,6 +50,17 @@ const Projects = ({ projectEnter, projectLeave }) => {
         ]}
         tags={["Python", "NumPy", "Neural Networks", "Backpropagation", "Word Embeddings", "MNIST"]}
       />
+      <Entry
+        eyebrow="Hackathon winner"
+        title="Kakshya"
+        link={github("kakshya")}
+        bullets={[
+          "Built in **6 hours** at **eSewa Webthon 2080**, organized by Instinct Nepal, taking **first place**.",
+          "Used AI to **take smart notes** from classroom lectures: recording, summarizing content and saving key points.",
+          "Let users **categorize classes and recordings** for easy access afterward.",
+        ]}
+        tags={["HTML", "CSS", "JavaScript", "Django"]}
+      />
     </Section>
   );
 };
