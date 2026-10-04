@@ -13,7 +13,11 @@ module.exports = {
     },
     fontFamily: {
       ...defaultTheme.fontFamily,
-      mono: ["IBM Plex Mono", "monospace"],
+      // every component applies `font-mono` on its root element for one
+      // consistent typeface site-wide; it's a plain, easy-to-read sans-serif
+      // now, not an actual monospace font — kept the key name to avoid
+      // touching every file's className.
+      mono: ["Inter", "sans-serif"],
     },
     extend: {
       colors: {

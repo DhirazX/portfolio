@@ -13,12 +13,7 @@ const Publications = () => (
         label: "DOI: 10.65091/icicset.v2i1.15",
         after: <FaArrowUpRightFromSquare />,
       }}
-      bullets={[
-        "Proposed an unsupervised query refinement framework that uses **Latent Dirichlet Allocation** to improve semantic search relevance, with coherence-based selection of the number of topics.",
-        "Ran experiments on **MedQuAD (~47K medical QA pairs)** with full preprocessing and linguistic filtering.",
-        "Compared against **LSI and BERT-based methods**, mapping the trade-off between probabilistic topic models and contextual embeddings.",
-        "Showed topic modeling is **effective for query expansion**, and pinned down where it fails on contextual semantics.",
-      ]}
+      description="This paper asks whether topic modeling can make search smarter without the cost of a transformer. I built an unsupervised query refinement framework using Latent Dirichlet Allocation, tested it on ~47K medical QA pairs from MedQuAD, and compared it against LSI and BERT-based methods. It's genuinely good at broadening queries, but it struggles with deeper contextual meaning — which turned out to be the more interesting finding."
       tags={["LDA", "Topic Modeling", "Query Expansion", "MedQuAD", "LSI", "BERT"]}
     />
   </Section>

@@ -8,22 +8,14 @@ const Experience = () => (
       title="Software Engineer"
       subtitle="Dlplatforms Pvt. Ltd. (dl.surf)"
       tags={["React / Next.js", "TypeScript", "REST API Design", "NSFW Classification", "Content Moderation", "CI/CD · Jenkins"]}
-      bullets={[
-        "Developed **scalable web applications** with React.js, Next.js and TypeScript, focused on modular architecture and state management.",
-        "Integrated an open-source **NSFW classification model** and custom **profanity filtering** algorithms for automated content moderation.",
-        "Redesigned **API response schemas** to cut redundant round trips between the frontend and the REST backend.",
-        "Worked in **continuous integration, code reviews and automated deployment** pipelines with Git, GitHub and Jenkins.",
-      ]}
+      description="My day-to-day here is building production features in React, Next.js, and TypeScript — the kind of work where you're thinking about state management and API design as much as the UI. I also worked on the content moderation side, wiring up an NSFW classifier and a custom profanity filter, and spent time cleaning up API response schemas so the frontend wasn't making redundant round trips. All of it runs through a normal CI/CD pipeline with Git, GitHub, and Jenkins."
     />
     <Entry
       eyebrow="May 2023 — May 2024"
       title="Freelance Web Developer"
       subtitle="Client projects"
       tags={["React.js", "Tailwind CSS"]}
-      bullets={[
-        "Delivered **custom web applications** for client requirements using React.js and Tailwind CSS.",
-        "Owned **end-to-end delivery** for **3+ client projects**: design, build, deployment and revisions.",
-      ]}
+      description="Before this, I was freelancing: building websites for clients from scratch with React and Tailwind CSS. I handled everything end to end — design, build, deployment, and the inevitable round of revisions — across 3+ client projects."
     />
   </Section>
 );

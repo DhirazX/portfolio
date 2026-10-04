@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   SiPython,
   SiJavascript,
@@ -11,7 +10,7 @@ import {
   SiDocker,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
-import Section, { reveal } from "./section";
+import Section from "./section";
 import Eyebrow from "./eyebrow";
 
 const machineLearning = [
@@ -44,8 +43,8 @@ const IconGrid = ({ items }) => (
   <div className="grid grid-cols-[repeat(auto-fill,minmax(84px,1fr))] gap-x-3 gap-y-7">
     {items.map(({ name, icon: Icon }) => (
       <div className="group flex flex-col items-start gap-2" key={name}>
-        <Icon className="text-[1.7rem] transition-colors duration-150 group-hover:text-accent" />
-        <span className="text-[13px] leading-tight">{name}</span>
+        <Icon className="text-[1.8rem] transition-colors duration-150 group-hover:text-accent" />
+        <span className="text-[14px] leading-tight">{name}</span>
       </div>
     ))}
   </div>
@@ -53,9 +52,9 @@ const IconGrid = ({ items }) => (
 
 const Skills = () => (
   <Section title="Skills" index="05">
-    <motion.div {...reveal(30)}>
+    <div>
       <Eyebrow>Machine Learning &amp; AI</Eyebrow>
-      <div className="text-[1.05rem] leading-[1.9] max600:text-[0.95rem]">
+      <div className="text-[1.1rem] leading-[1.9] max600:text-[1rem]">
         {machineLearning.map((item, i) => (
           <span key={item}>
             <span className="transition-colors duration-150 hover:text-accent">
@@ -67,12 +66,9 @@ const Skills = () => (
           </span>
         ))}
       </div>
-    </motion.div>
+    </div>
 
-    <motion.div
-      className="flex justify-between gap-12 max900:flex-col max900:gap-10"
-      {...reveal(30)}
-    >
+    <div className="flex justify-between gap-12 max900:flex-col max900:gap-10">
       <div className="w-[42%] max900:w-full">
         <Eyebrow>Programming</Eyebrow>
         <IconGrid items={programming} />
@@ -81,7 +77,7 @@ const Skills = () => (
         <Eyebrow>Tools &amp; Frameworks</Eyebrow>
         <IconGrid items={tools} />
       </div>
-    </motion.div>
+    </div>
   </Section>
 );
 
