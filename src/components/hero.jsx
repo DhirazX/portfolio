@@ -14,7 +14,7 @@ const interests = [
 // the whole page in five lines, each one jumps to its section
 const overview = [
   { id: "publications", n: "01", title: "publications", line: "LDA query refinement · ICICSET 2025" },
-  { id: "projects", n: "02", title: "projects", line: "Hybrid RAG engine · Watermarking · ML fundamentals · Kakshya" },
+  { id: "projects", n: "02", title: "projects", line: "shellsense · Hybrid RAG engine · Watermarking · ML fundamentals" },
   { id: "education", n: "03", title: "education", line: "Software Engineering · Bachelor’s · 2025" },
   { id: "experience", n: "04", title: "experience", line: "Software Engineer · 2024–2026" },
   { id: "skills", n: "05", title: "skills", line: "Python · PyTorch · NLP · IR" },
@@ -47,12 +47,12 @@ const Hero = () => {
             Software Engineer
           </div>
           <p className="mt-6 max-w-[40rem] text-[16px] leading-[1.6] max900:mx-auto max500:text-[0.95rem]">
-            I work on natural language processing and information retrieval,
-            mostly the parts where systems have to figure out what something
-            means, not just what it says. A lot of what’s here started as me
-            building things from scratch to actually understand how they work,
-            before reaching for the libraries that do it faster. First paper
-            published at ICICSET 2025.
+            I work on natural language processing and information retrieval.
+            I am interested in the part where a computer understands what
+            something means, not just the words it sees. I like to build
+            things myself first, so I really understand how they work. Then
+            I use the faster libraries and tools. I published my first paper
+            at ICICSET in 2025.
           </p>
 
           <div className="mt-6">

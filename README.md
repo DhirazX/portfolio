@@ -1,4 +1,4 @@
-# Dhiraj Poudel — portfolio
+# Dhiraj Poudel - portfolio
 
 Personal research portfolio, live at [dhirajpoudel.com.np](https://dhirajpoudel.com.np).
 

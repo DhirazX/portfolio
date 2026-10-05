@@ -15,7 +15,7 @@ const coursework = [
 const Education = () => (
   <Section title="Education" index="03">
     <Entry
-      eyebrow="2021 — 2025"
+      eyebrow="2021 to 2025"
       title="Bachelor’s in Software Engineering"
       subtitle="Nepal College of Information and Technology"
     >

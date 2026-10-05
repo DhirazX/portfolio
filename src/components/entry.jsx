@@ -1,9 +1,9 @@
 import Chip from "./chip";
 import Eyebrow from "./eyebrow";
 
-const Entry = ({ eyebrow, title, subtitle, tags, link, description, children }) => (
+const Entry = ({ eyebrow, eyebrowTone, title, subtitle, tags, link, description, children }) => (
   <div className="font-mono">
-    {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+    {eyebrow && <Eyebrow tone={eyebrowTone}>{eyebrow}</Eyebrow>}
     <h3 className="text-[1.4rem] font-bold leading-[1.25] max600:text-[1.2rem]">
       {title}
     </h3>
