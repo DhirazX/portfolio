@@ -12,11 +12,10 @@ const github = (repo) => ({
 const Projects = () => (
   <Section title="Projects" index="02">
     <Entry
-      eyebrow="In progress"
-      eyebrowTone="warning"
+      eyebrow="Autograd engine"
       title="vectorgrad"
       link={github("vectorgrad")}
-      description="An automatic differentiation engine built from scratch, in the style of Karpathy's micrograd. So far, I have built the scalar version: a Value class that tracks operations and computes gradients with backpropagation, plus a small neural network (neuron, layer, MLP) on top of it. I tested the gradients and the network output against PyTorch using pytest. Next, I am building a tensor version backed by NumPy, with matrix multiplication and broadcasting, so it works on whole arrays instead of single numbers."
+      description="An automatic differentiation engine built from scratch. It has two parts. The scalar version is a Value class that tracks operations and computes gradients with backpropagation, plus a small neural network (neuron, layer, MLP) on top of it. The tensor version is backed by NumPy and supports matrix multiplication and broadcasting, so it works on whole arrays instead of single numbers. I tested the gradients and the network output against PyTorch using pytest."
       tags={["Python", "NumPy", "PyTest", "PyTorch"]}
     />
     <Entry
