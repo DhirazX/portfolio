@@ -47,12 +47,10 @@ const Hero = () => {
             Software Engineer
           </div>
           <p className="mt-6 max-w-[40rem] text-[16px] leading-[1.6] max900:mx-auto max500:text-[0.95rem]">
-            I work on natural language processing and information retrieval.
-            I am interested in the part where a computer understands what
-            something means, not just the words it sees. I like to build
-            things myself first, so I really understand how they work. Then
-            I use the faster libraries and tools. I published my first paper
-            at ICICSET in 2025.
+            I work on natural language processing and information retrieval,
+            mainly search and how systems represent meaning. I want to
+            understand how language models look up and use information, and
+            when we can rely on the answers they give back. I published my first paper at ICICSET in 2025.
           </p>
 
           <div className="mt-6">
